@@ -1,9 +1,9 @@
-import { ADD_CATEGORY, ADD_CATEGORIES, DELETE_CATEGORY } from './PostActions';
+import { ADD_CATEGORY, ADD_CATEGORIES, DELETE_CATEGORY } from './CategoryActions';
 
 // Initial State
 const initialState = { data: [] };
 
-const PostReducer = (state = initialState, action) => {
+const CategoryReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_CATEGORY :
       return {
@@ -28,10 +28,10 @@ const PostReducer = (state = initialState, action) => {
 /* Selectors */
 
 // Get all categories
-export const getPosts = state => state.categories.data;
+export const getCategories = state => state.categories.data;
 
 // Get category by id
-export const getPost = (state, id) => state.categories.data.filter(category => category.id === id)[0];
+export const getCategory = (state, id) => state.categories.data.filter(category => category.id === id)[0];
 
 // Export Reducer
-export default PostReducer;
+export default CategoryReducer;
