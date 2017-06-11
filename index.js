@@ -1,6 +1,14 @@
 /**
  * Entry Script
  */
+const injectTapEventPlugin = require('react-tap-event-plugin');
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
+
+// import environmental variables from our variables.env file
+require('dotenv').config({ path: 'variables.env' });
 
 if (process.env.NODE_ENV === 'production') {
   process.env.webpackAssets = JSON.stringify(require('./dist/client/manifest.json'));
