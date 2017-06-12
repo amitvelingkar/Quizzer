@@ -2,6 +2,14 @@
   background: #eee url('../../header-bk.png') center;
   background-size: cover;
   border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
 }
 
 .content {
@@ -14,8 +22,9 @@
 
 .site-title {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 24px;
   float: left;
+  margin-left: 1rem;
 }
 
 .site-title a {
@@ -39,7 +48,6 @@
 
 .language-switcher ul {
   list-style: none;
-  width: 980px;
   margin: auto;
   text-align: right;
 }
